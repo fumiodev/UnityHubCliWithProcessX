@@ -51,7 +51,7 @@ async Task<int> MainAsync(string targetVersion)
 
 /// <summary>
 /// ダブルコーテーションで包むだけ。
-/// 特定のパスの実行ファイルパスを想定しています。
+/// 特定の実行ファイルパスを想定しています。
 /// </summary>
 string EncloseInQuotes(string filePath)
 {
