@@ -31,11 +31,9 @@ async Task<int> MainAsync(string targetVersion)
         // インストール用のコマンドを構築
         var commandStringBuilder = new StringBuilder();
         commandStringBuilder.Append(EncloseInQuotes(unityHubPath));
-        commandStringBuilder.Append(" -ArgumentList \"");
         commandStringBuilder.Append(" -- --headless install");
         commandStringBuilder.Append($" --version {targetVersion}");
         commandStringBuilder.Append($" --changeset `unity-changeset` {targetVersion}");
-        commandStringBuilder.Append(" --silent\" -Wait -PassThru");
         Console.WriteLine($"Install command: {commandStringBuilder}");
         
         // 実行すると通常はUACでダイアログ操作が必要だが、
